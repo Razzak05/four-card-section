@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--Very-Light-Gray);
+}
+
+.hero-container {
+  max-width: 520px;
+  text-align: center;
+  margin: 70px auto;
+}
+
+.hero-container h1 {
+  color: var(--Very-Dark-Blue);
+  font-weight: 300;
+  font-size: 1.75rem;
+}
+
+.hero-container h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  padding-bottom: 15px;
+}
+
+.hero-container p {
+  color: var(--Grayish-Blue);
+  font-size: 0.85rem;
+}
+
+.card-container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  margin: 60px auto;
+  padding: 60px;
+  gap: 25px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.05);
+  text-align: center; /* Center align content */
+}
+
+.card h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: var(--Grayish-Blue);
+  font-size: 0.75rem;
+  line-height: 20px;
+  margin-bottom: 60px; /* Reduced margin for better spacing */
+}
+
+.card img {
+  width: 20%;
+  float: right; /* Center align image */
+}
+
+/* Border top colors */
+.supervisor {
+  border-top: 4px solid var(--Cyan);
+  align-self: center;
+}
+
+.team-builder {
+  border-top: 4px solid var(--Red);
+}
+
+.karma {
+  border-top: 4px solid var(--Orange); /* Adjusted for Karma */
+}
+
+.calculator {
+  border-top: 4px solid var(--Blue);
+  align-self: center;
+}
+
+
+/* .col2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+} */
+
+.col2{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+/* Additional styling for responsiveness */
+@media screen and (max-width: 830px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Adjust to single column layout on smaller screens */
+  }
+}
